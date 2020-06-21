@@ -1,0 +1,13 @@
+
+# Bash script where I test code
+test.sh
+
+# Backup folder for my tests
+test
+
+# Config files
+src/config.sh
+src/.dropbox_uploader
+
+# DropBox uploader executable
+src/dropbox_uploader.sh
