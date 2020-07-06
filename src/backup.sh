@@ -53,7 +53,12 @@ if [ -f "$ARCHIVE_PATH" ]; then
 fi
 
 # Create archive with website files and database dump
-tar -cf $ARCHIVE_PATH $WEBSITE_PATH $DUMP_PATH
+args=(--create
+      --directory /
+      --file $ARCHIVE_PATH
+      $WEBSITE_PATH
+      $DUMP_PATH)
+tar "${args[@]}"
 
 #---------------------
 # UPLOAD DROPBOX
